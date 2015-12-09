@@ -19,5 +19,5 @@ bill = ['',date,period,price,'','','']
 
 
 with open('invoices.csv','a+') as csvfile:
-        writer = csv.writer(csvfile)
-            writer.writerow(bill)        
+    writer = csv.writer(csvfile)
+    writer.writerow(bill)        
