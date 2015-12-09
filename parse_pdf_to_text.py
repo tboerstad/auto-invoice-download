@@ -7,7 +7,7 @@ with open('get.txt','r',encoding='utf-8') as f:
 
 a = text.split('\n')
 b = [x for x in a if x]
-print(b)
+
 i = b.index('TOTALT $ BETALE')
 price = b[i-1].replace(',','.')
 i = b.index('Betalingsfrist')
@@ -17,8 +17,6 @@ period = "bredbaand ({0})".format(b[i+2])
 
 bill = ['',date,period,price,'','','']
 
-
-print(price,date,period)
 
 with open('invoices.csv','a+') as csvfile:
         writer = csv.writer(csvfile)
