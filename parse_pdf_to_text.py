@@ -15,7 +15,7 @@ date = b[i+1]
 i = b.index('PERIODE')
 period = "bredbaand ({0})".format(b[i+2])
 
-bill = ['',date,period,price,'','','']
+bill = ['2',date,period,price,'','','']
 
 
 with open('invoices.csv','a+') as csvfile:

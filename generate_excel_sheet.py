@@ -71,7 +71,8 @@ for c,v in enumerate(col):
     worksheet.write(currentRow,c,v,n)
 
 worksheet.set_column(0, 0, 10)
-worksheet.set_column(1, 2, 20)
+worksheet.set_column(1, 1, 20)
+worksheet.set_column(2, 2, 25)
 worksheet.set_column(4, 4, 10)
 worksheet.set_row(12, 30)
 

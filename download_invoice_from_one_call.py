@@ -31,7 +31,7 @@ with open('onecall.pdf', 'wb') as handle:
 
 v = [ s.text.strip().replace(',','.') for s in newestInvoice ]
 
-bill = ['',v[2],'mobilregning ' + v[0],v[1],'','','']
+bill = ['1',v[2],'mobilregning ' + v[0],v[1],'','','']
 
 with open('invoices.csv','a+') as csvfile:
     writer = csv.writer(csvfile)
