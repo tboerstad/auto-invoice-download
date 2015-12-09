@@ -29,10 +29,10 @@ with open('onecall.pdf', 'wb') as handle:
      for block in response.iter_content(1024):
          handle.write(block)
 
-bill = []
-for j in range(3):
-    bill.append(newestInvoice[j].text.strip().replace(',','.'))
+v = [ s.text.strip().replace(',','.') for s in newestInvoice ]
 
-with open('onecall.csv','w') as csvfile:
+bill = ['',v[2],'mobilregning ' + v[0],v[1],'','','']
+
+with open('invoices.csv','a+') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(bill)
