@@ -30,7 +30,7 @@ with open('netcom.pdf', 'wb') as handle:
 
 v = [s.text.strip().replace(',', '.') for s in newestInvoice]
 
-bill = ['1', v[4], 'mobilregning (' + v[2] + ')', v[6] ,'','','']
+bill = ['1', v[4], 'mobilregning (' + v[2] + ')', v[6].split(' ')[0] ,'','','']
 
 with open('invoices.csv', 'a+') as csvfile:
     writer = csv.writer(csvfile)
