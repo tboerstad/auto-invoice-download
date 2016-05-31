@@ -35,8 +35,10 @@ with open('telia.pdf', 'wb') as handle:
 v = [s.text.strip().replace(',', '.') for s in newestInvoice]
 
 dates = re.findall("\d\d\.\d\d\.\d\d\d\d", v[0])
+amount = re.findall("\d+\.\d+",v[2])
+
 description = 'mobilregning ( fra ' + dates[0] + ' til ' + dates[1] + ') '
-bill = ['1', v[3], description, v[2][0] ,'','','']
+bill = ['1', v[3], description, amount ,'','','']
 
 with open('invoices.csv', 'a+') as csvfile:
     writer = csv.writer(csvfile)
